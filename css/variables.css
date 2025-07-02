@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500);
+@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:200,300,400,500);
+
+:root {
+  /* Colors */
+  --colorprimary: #fefae0;
+  --colorprimary-dark: #dda15e;
+  --colorsecondary: #25291c;
+  --colorsecondary-light: #666;
+  --coloraccent: #606c38;
+  --coloraccent-light: #628b48;
+  /* Font */
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Cormorant Garamond", sans-serif;
+  --h1: 700 var(--size-xxxl) var(--font-primary);
+  --h2: bold 3.6rem/1.6 var(--font-secondary);
+  --h3: bold 2rem/3rem var(--font-primary);
+  /* Sizing */
+  --size-s: 0.6rem;
+  --size-base: 1rem;
+  --size-m: 1.2rem;
+  --size-l: 1.5rem;
+  --size-xl: 2rem;
+  --size-xxl: 2.4rem;
+  --size-xxxl: 4rem;
+  /* Other */
+  --margin-regular: 0 auto;
+  --push-l: 5.625rem;
+}
