@@ -1,0 +1,215 @@
+@import url("/css/variables.css");
+@import url("/css/sections.css");
+
+/* Resets */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: var(--size-base) / 1.6 var(--font-primary);
+  color: var(--colorsecondary);
+  background-color: var(--colorprimary);
+}
+
+/* Navbar start */
+
+.l-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3rem;
+  background-color: var(--colorprimary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-size: var(--size-l);
+  line-height: 1.1;
+  border-bottom: 1px solid var(--colorprimary-dark);
+}
+
+@media (max-width: 768px) {
+  .l-header {
+    flex-direction: column;
+    gap: var(--padding-s);
+    line-height: 2;
+    border-bottom: none;
+  }
+}
+
+.logo {
+  width: 50px;
+  z-index: 100;
+}
+
+.c-nav {
+  display: flex;
+  gap: var(--padding-md);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  /* Hide the links by default */
+  .c-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--colorprimary);
+    position: absolute;
+    top: var(--push-l);
+    right: 0;
+    width: 100%;
+  }
+}
+.c-nav a {
+  color: var(--coloraccent);
+  transition: 0.4s;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+@media (max-width: 768px) {
+  .c-nav a {
+    display: block;
+    padding: var(--padding-md);
+    text-align: center;
+    margin: 0;
+  }
+}
+.c-nav a:hover {
+  box-shadow: 0px 2px 0px var(--colorprimary-dark);
+}
+
+@media (max-width: 768px) {
+  .c-nav a:hover {
+    background-color: var(--colorprimary-dark);
+  }
+}
+/* Show navigation when "active" (script.js will toggle this) I don't remember where I found this functionality */
+@media (max-width: 768px) {
+  .c-nav.active {
+    display: flex;
+    top: 7.5rem;
+  }
+}
+.c-nav a::after {
+  text-decoration: none;
+}
+
+/* Hamburger menu */
+
+/* Hide on wide screens */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  /* Show the menu */
+  .hamburger {
+    display: flex;
+  }
+}
+/* Hamburger icon */
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--coloraccent);
+  margin: 5px 0;
+}
+.hamburger span:hover {
+  background-color: var(--colorprimary);
+}
+
+/* Product cards */
+
+.product-card {
+  border: 2px solid var(--coloraccent);
+  overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:last-child {
+  flex-grow: 1;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.underline {
+  transition: 300ms;
+  border-bottom: 1px solid transparent;
+}
+.underline:hover {
+  border-color: var(--colorprimary-dark);
+}
+
+.product-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background-color: var(--colorprimary);
+}
+
+.product-card-content {
+  padding: var(--size-base);
+}
+
+.product-card-title {
+  font: 500 var(--size-l) var(--font-primary);
+  color: var(--colorsecondary);
+  margin-bottom: 10px;
+}
+
+.product-card-subtitle {
+  color: var(--colorsecondary-light);
+  margin-bottom: 5px;
+}
+
+.product-card-body {
+  color: var(--colorsecondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.product-card-link {
+  color: var(--coloraccent);
+  text-decoration: none;
+  font-size: var(--size-base);
+}
+
+@media (min-width: 768px) and (max-width: 1139px) {
+  .l-container-centered {
+    justify-content: flex-start;
+  }
+  .product-card {
+    width: calc(50% - 10px);
+    max-width: none;
+  }
+}
+
+@media (min-width: 1140px) {
+  .product-card {
+    width: 360px;
+    max-width: 360px;
+  }
+}
+
+/* Utility Classes */
+
+.spacer {
+  height: 4rem;
+}
+
+@media (max-width: 768px) {
+  .spacer {
+    height: 2rem;
+  }
+}
