@@ -331,7 +331,6 @@
     text-align: center;
   }
 
-  .feature-button,
   .feature .col-button {
     align-self: center;
   }
@@ -373,16 +372,6 @@
   font: var(--size-m) / 1.6 var(--font-primary);
   color: var(--colorsecondary);
   padding-bottom: var(--size-l);
-}
-
-.feature-button {
-  font-size: var(--size-base);
-  border: 1px solid var(--coloraccent);
-  color: var(--coloraccent);
-  padding: var(--size-base) var(--size-l);
-  border-radius: var(--size-xxl);
-  text-decoration: none;
-  width: fit-content;
 }
 
 .feature-image {
