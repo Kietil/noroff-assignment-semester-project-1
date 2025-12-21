@@ -1,6 +1,8 @@
 # Wildwoven Hikes
 
-![Project Screenshot](./media/screenshot1.jpg)
+![Project Screenshot](./media/cover.jpg)
+
+- [Site](https://wildwoven-hikes.netlify.app/)
 
 Noroff's "Semester Project 1" where "Planning, Design and Code Implementation" came together for the first time.
 
